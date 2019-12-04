@@ -1,0 +1,32 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int i=0;
+
+
+int main(){
+	int freq = 0;
+	string line;
+	char caracter;
+	ifstream arquivo ("exemplo.txt");
+	if (arquivo.is_open()){
+		getline (arquivo, line);
+		cout << line << endl;
+		for (int x = 0; x < line.size(); x++){
+			if (line[x] != '\0'){
+				caracter = line[x];
+				for(int x2 = x; x2 < line.size(); x2++){
+					if(caracter == line[x2]){
+						freq ++;
+						line[x2] = '\0';
+					}
+				}
+			cout << caracter<<"   "<<freq<< "   " << freq << "/" << line.size() << endl;
+			freq = 0;
+			}	
+		}
+		arquivo.close();
+	}		
+}																		
