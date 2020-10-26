@@ -1,1 +1,1 @@
-# compressão de huffman
+# huffman compression
