@@ -1,2 +1,1 @@
-# Tabela_Freg
-Atividade1
+# compressão de huffman
